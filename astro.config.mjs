@@ -21,7 +21,7 @@ export default defineConfig({
 		emdash({
 			database: d1({ binding: "DB", session: "auto" }),
 			storage: r2({ binding: "MEDIA" }),
-			authProviders: [atproto()],
+			authProviders: [atproto({ allowedDIDs: ["did:plc:l37td5yhxl2irrzrgvei4qay"] })],
 			plugins: [cloudflareEmail({ from: "no-reply@emdash.coffeencode.cc" })],
 		}),
 	],
