@@ -1,10 +1,14 @@
 import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
-import { d1, r2 } from "@emdash-cms/cloudflare";
+import { d1, r2, sandbox } from "@emdash-cms/cloudflare";
+import { atproto } from "@emdash-cms/auth-atproto";
 import { defineConfig, fontProviders } from "astro/config";
 import emdash from "emdash/astro";
 
 export default defineConfig({
+	server: {
+		host: "127.0.0.1",
+	},
 	output: "server",
 	adapter: cloudflare(),
 	image: {
@@ -16,7 +20,8 @@ export default defineConfig({
 		emdash({
 			database: d1({ binding: "DB", session: "auto" }),
 			storage: r2({ binding: "MEDIA" }),
-			sandboxRunner: "./src/sandbox-runner.ts",
+			sandboxRunner: sandbox(),
+			authProviders: [atproto()],
 		}),
 	],
 	fonts: [
