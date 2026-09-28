@@ -25,10 +25,15 @@
 			"bucket_name": "emdash-media","preview_bucket_name": "emdash-media",
 		},
 	],
+	"send_email": [
+		{
+			"name": "EMAIL",
+			"allowed_sender_addresses": ["no-reply@cms.coffeencode.cc"],
+		},
+	],
   "vars": {
 		"EMDASH_SITE_URL": "https://emdash.coffeencode.cc"
   },
-	"worker_loaders": [{ "binding": "LOADER" }],
 	// General maintenance cron trigger
 	"triggers": {
 		"crons": ["* * * * *"],
