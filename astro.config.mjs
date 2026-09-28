@@ -2,6 +2,7 @@ import cloudflare from "@astrojs/cloudflare";
 import react from "@astrojs/react";
 import { d1, r2 } from "@emdash-cms/cloudflare";
 import { cloudflareEmail } from "@emdash-cms/cloudflare/plugins";
+import atprotoPlugin from "@emdash-cms/plugin-atproto";
 import { atproto } from "@emdash-cms/auth-atproto";
 import { defineConfig, fontProviders } from "astro/config";
 import emdash from "emdash/astro";
@@ -22,7 +23,10 @@ export default defineConfig({
 			database: d1({ binding: "DB", session: "auto" }),
 			storage: r2({ binding: "MEDIA" }),
 			authProviders: [atproto({ allowedDIDs: ["did:plc:l37td5yhxl2irrzrgvei4qay"] })],
-			plugins: [cloudflareEmail({ from: "no-reply@emdash.coffeencode.cc" })],
+			plugins: [
+				cloudflareEmail({ from: "no-reply@emdash.coffeencode.cc" }),
+				atprotoPlugin,
+			],
 		}),
 	],
 	fonts: [

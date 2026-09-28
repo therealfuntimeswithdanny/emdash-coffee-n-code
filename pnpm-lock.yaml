@@ -20,6 +20,9 @@ importers:
       '@emdash-cms/cloudflare':
         specifier: ^1.0.1
         version: 1.0.1(8270a6f22a9bccb94f7e458db60da5ff)
+      '@emdash-cms/plugin-atproto':
+        specifier: 0.2.2
+        version: 0.2.2(emdash@1.0.1)
       astro:
         specifier: ^7.3.2
         version: 7.3.5(@types/node@26.6.3)(yaml@2.9.1)
@@ -585,6 +588,11 @@ packages:
 
   '@emdash-cms/gutenberg-to-portable-text@1.0.1':
     resolution: {integrity: sha512-UUmTZhlQ75iPx1GTW2+GqjltSq2C+gTv/Hecd6rlETn6eBo7sIU4QEmhWZdQu47jkd1miI7ZKXmEysjOlY+USA==}
+
+  '@emdash-cms/plugin-atproto@0.2.2':
+    resolution: {integrity: sha512-j3rfEM7PBueDe8/n7daMWkwC/KEhTsS35jrKjFvWscHEHijNLSoKzAFs8tZeFQ1Iyf1ZTo6SPnHOlg3AoiJ+jQ==}
+    peerDependencies:
+      emdash: '>=0.15.0'
 
   '@emdash-cms/plugin-types@0.5.0':
     resolution: {integrity: sha512-nxs4XrXX2kV8Tpkcf9c7RJDMzvUXPM5MRRsBYxzQhjY9bTmsZGtXyts9PSbJNXGy8gyFlV+T41QU67k7U57pGg==}
@@ -4710,6 +4718,10 @@ snapshots:
     dependencies:
       '@wordpress/block-serialization-default-parser': 5.56.0
       parse5: 7.3.0
+
+  '@emdash-cms/plugin-atproto@0.2.2(emdash@1.0.1)':
+    dependencies:
+      emdash: 1.0.1(@astrojs/react@6.0.6(@types/node@26.6.3)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(esbuild@0.28.2)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(yaml@2.9.1))(@atcute/cbor@2.3.8(@atcute/cid@2.5.0))(@atcute/cid@2.5.0)(@atcute/identity@2.0.2(@atcute/lexicons@2.1.1)(typescript@6.0.3))(@date-fns/tz@1.5.0)(@emdash-cms/auth-atproto@0.2.45)(@floating-ui/dom@1.8.0)(@tiptap/extensions@3.31.3(@tiptap/core@3.31.3(@tiptap/pm@3.31.3))(@tiptap/pm@3.31.3))(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(astro@7.3.5(@types/node@26.6.3)(yaml@2.9.1))(date-fns@4.4.0)(echarts@6.1.0)(prosemirror-model@1.25.12)(prosemirror-state@1.4.4)(prosemirror-view@1.42.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@6.0.3)
 
   '@emdash-cms/plugin-types@0.5.0':
     dependencies:
