@@ -28,6 +28,7 @@
   "vars": {
 		"EMDASH_SITE_URL": "https://emdash.coffeencode.cc"
   },
+	"worker_loaders": [{ "binding": "LOADER" }],
 	// General maintenance cron trigger
 	"triggers": {
 		"crons": ["* * * * *"],
