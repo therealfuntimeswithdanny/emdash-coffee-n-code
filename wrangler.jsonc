@@ -17,7 +17,7 @@
 		},
 	],
   "vars": {
-    "EMDASH_SITE_URL": "emdash.coffeencode.cc"
+		"EMDASH_SITE_URL": "https://emdash.coffeencode.cc"
   },
 	// Sandboxed plugins require Worker Loader, available on Workers paid plans. Uncomment to enable:
 	// "worker_loaders": [{ "binding": "LOADER" }],
